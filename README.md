@@ -111,6 +111,6 @@ Minimize the action $S$ while enforcing:
 Install dependencies:
 ```bash
 pip install numpy scipy matplotlib sympy
-git clone https://github.com/yourusername/mep-euler-lagrange.git
+git clone https://github.com/faridf/mep-euler-lagrange.git
 cd mep-euler-lagrange
 python mep_finder.py
