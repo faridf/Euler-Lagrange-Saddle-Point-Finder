@@ -42,60 +42,60 @@ The script allows users to:
 ## Theory
 
 ### Potential Energy Surface
-The **Potential Energy Surface (PES)** represents the energy of a system as a function of its spatial coordinates. In two dimensions, it is expressed as \( V(x, y) \). Finding the MEP on a PES is crucial for understanding reaction pathways, transition states, and energy barriers.
+The **Potential Energy Surface (PES)** represents the energy of a system as a function of its spatial coordinates. In two dimensions, it is expressed as $V(x, y)$. Finding the MEP on a PES is crucial for understanding reaction pathways, transition states, and energy barriers.
 
 ### Lagrangian and Action
 The **Lagrangian** is defined as the difference between kinetic and potential energy:
-\[
+$$
 L = T - V
-\]
+$$
 For this problem:
-- **Kinetic Energy**: \( T = \frac{1}{2}\left(\frac{dy}{dx}\right)^2 \)
-- **Potential Energy**: \( V(x, y) \)
+- **Kinetic Energy**: $T = \frac{1}{2}\left(\frac{dy}{dx}\right)^2$
+- **Potential Energy**: $V(x, y)$
 
 Thus, the Lagrangian becomes:
-\[
+$$
 L(x, y, y') = \frac{1}{2}\left(\frac{dy}{dx}\right)^2 + V(x, y)
-\]
+$$
 
-The **action** \( S \) is the integral of the Lagrangian:
-\[
+The **action** $S$ is the integral of the Lagrangian:
+$$
 S = \int_{x_0}^{x_f} L(x, y, y') \, dx
-\]
+$$
 
 ### Euler-Lagrange Equation
-The path \( y(x) \) that minimizes \( S \) is obtained by solving the **Euler-Lagrange equation**:
-\[
+The path $y(x)$ that minimizes $S$ is obtained by solving the **Euler-Lagrange equation**:
+$$
 \frac{d}{dx}\left(\frac{\partial L}{\partial y'}\right) - \frac{\partial L}{\partial y} = 0
-\]
-Substituting \( L(x, y, y') \), this simplifies to:
-\[
+$$
+Substituting $L(x, y, y')$, this simplifies to:
+$$
 \frac{d^2y}{dx^2} - \frac{\partial V}{\partial y} = 0
-\]
+$$
 
 ### Saddle Point Constraints
 A **saddle point** satisfies:
-1. \( \nabla V(x_s, y_s) = 0 \) (gradient is zero).
-2. Determinant of the Hessian matrix \( H \) is negative (\( \text{det}(H) < 0 \)).
+1. $\nabla V(x_s, y_s) = 0$ (gradient is zero).
+2. Determinant of the Hessian matrix $H$ is negative ($\text{det}(H) < 0$).
 
 ---
 
 ## Methodology
 
 ### Discretization and Spline Interpolation
-1. **Discretize** the path between start \((x_0, y_0)\) and end \((x_f, y_f)\).
-2. **Initial Guess** for \( y \)-coordinates (including saddle point) is provided.
-3. Use **spline interpolation** to ensure smoothness and differentiability of \( y(x) \).
+1. **Discretize** the path between start $(x_0, y_0)$ and end $(x_f, y_f)$.
+2. **Initial Guess** for $y$-coordinates (including saddle point) is provided.
+3. Use **spline interpolation** to ensure smoothness and differentiability of $y(x)$.
 
 ### Optimization Problem
-Minimize the action \( S \) while enforcing:
-- Gradient Constraint: \( \nabla V(x_s, y_s) = (0, 0) \)
-- Hessian Determinant Constraint: \( \text{det}(H) < 0 \)
+Minimize the action $S$ while enforcing:
+- Gradient Constraint: $\nabla V(x_s, y_s) = (0, 0)$
+- Hessian Determinant Constraint: $\text{det}(H) < 0$
 
 ### Equations
-- **Lagrangian**: \( L(x, y, y') = \frac{1}{2}\left(\frac{dy}{dx}\right)^2 + V(x, y) \)
-- **Action**: \( S = \int_{x_0}^{x_f} L(x, y, y') \, dx \)
-- **Euler-Lagrange Equation**: \( \frac{d^2y}{dx^2} - \frac{\partial V}{\partial y} = 0 \)
+- **Lagrangian**: $L(x, y, y') = \frac{1}{2}\left(\frac{dy}{dx}\right)^2 + V(x, y)$
+- **Action**: $S = \int_{x_0}^{x_f} L(x, y, y') \, dx$
+- **Euler-Lagrange Equation**: $\frac{d^2y}{dx^2} - \frac{\partial V}{\partial y} = 0$
 
 ---
 
@@ -113,4 +113,4 @@ Install dependencies:
 pip install numpy scipy matplotlib sympy
 git clone https://github.com/yourusername/mep-euler-lagrange.git
 cd mep-euler-lagrange
-
+python mep_finder.py
