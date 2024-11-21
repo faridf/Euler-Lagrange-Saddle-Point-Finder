@@ -28,8 +28,6 @@ Unlike traditional methods (e.g., Nudged Elastic Band or Dimer), this approach d
 - [Advantages Over NEB and Dimer Methods](#advantages-over-neb-and-dimer-methods)
 - [Limitations](#limitations)
 - [Contributing](#contributing)
-- [License](#license)
-
 ---
 
 ## Overview
@@ -124,3 +122,35 @@ When prompted, enter the potential energy function or press Enter to use the def
 ```bash
 V(x, y) = -sin(πx) * sin(πy)
 ```
+
+
+### Example
+Running the script with the default potential:
+
+```bash
+python mep_finder.py
+```
+
+
+Output:
+
+A contour plot of the PES with the MEP and saddle point.
+Console details: saddle point coordinates, gradient, and Hessian determinant.
+
+## Advantages Over NEB and Dimer Methods
+
+Direct Minimization: No artificial forces or constraints.
+No Spring Forces: Avoids constructs like NEB's spring forces.
+Flexibility: Adapts to any user-defined potential energy function.
+Saddle Point Identification: Explicitly searches for saddle points.
+
+## Limitations
+
+Computational Cost: High for complex potentials or many discretization points.
+Dimensionality: Current implementation is limited to 2D.
+Initial Guess Sensitivity: Optimization success depends on initial guess.
+
+## Contributing
+Contributions are welcome! Feel free to submit pull requests or open issues.
+
+
