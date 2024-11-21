@@ -153,4 +153,13 @@ Initial Guess Sensitivity: Optimization success depends on initial guess.
 ## Contributing
 Contributions are welcome! Feel free to submit pull requests or open issues.
 
+![Figure_1](https://github.com/user-attachments/assets/6f597267-bd30-4baf-be1b-e025392ab66f)
+
+
+
+Number of iterations: 368, function evaluations: 13545, CG iterations: 1037, optimality: 4.83e+00, constraint violation: 6.99e-21, execution time:  2.9 s.
+Saddle Point Coordinates: x = -7.077349822562493e-22, y = -7.077350130900838e-22
+Gradient at saddle point: [6.9850646e-21 6.9850643e-21]
+Determinant of Hessian at saddle point: -97.40909103400243
+
 
