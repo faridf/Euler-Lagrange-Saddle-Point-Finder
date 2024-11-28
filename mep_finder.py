@@ -48,11 +48,6 @@ def hessian_potential_energy(x, y):
     hess = hessian_potential_energy_func(x, y)
     return np.array(hess)
 
-# Set parameters
-x_start, x_end = -0.2, 0.8
-y_start, y_end = -0.8, 0.2
-epsilon = 1e-6  # Small epsilon to avoid bounds issues
-
 def action(variables, num_points):
     """Compute the action for the given path."""
     num_internal_points = num_points - 2
@@ -226,6 +221,11 @@ def visualize_path(x_control, y_control, saddle_point):
     plt.show()
 
 if __name__ == "__main__":
+    # Set parameters
+    x_start, x_end = -0.2, 0.8
+    y_start, y_end = -0.8, 0.2
+    epsilon = 1e-6  # Small epsilon to avoid bounds issues
+    
     num_points = 20  # Adjust as needed
 
     # Find the minimum energy path
