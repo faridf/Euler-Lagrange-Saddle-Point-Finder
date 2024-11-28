@@ -67,7 +67,7 @@ def action(variables, x_start, x_end, y_start, y_end, num_points):
     dy = spline.derivative()(x)
 
     # Compute the integrand
-    integrand = 0.5 * dy**2 + potential_energy(x, y)
+    integrand = 0.5 * dy**2 - potential_energy(x, y)
 
     # Integrate using Simpson's rule
     return simps(integrand, x)
