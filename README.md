@@ -8,7 +8,9 @@ This repository contains a Python script to compute the **Minimum Energy Path (M
 
 Unlike traditional methods (e.g., Nudged Elastic Band or Dimer), this approach directly minimizes the action integral, avoiding artificial forces or constraints.
 
-![2024-11-29_23-32](https://github.com/user-attachments/assets/74a93918-39c2-48c4-8fc9-ab3a70eb2f92)
+
+![napkin-selection](https://github.com/user-attachments/assets/1695d43c-3db3-4161-b6f3-2b34585366a3)
+
 ---
 
 ## Table of Contents
